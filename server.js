@@ -52,7 +52,8 @@ app.post('/mail', async (req, res)=>{
 	const {exam, mail, Email, Phone, fullname} = req.body;
 	const subject = `${exam} Essay by ${fullname}`;
 	const newMail = `${mail} \n ${fullname} \n ${Phone} \n ${Email}`
-	await mailer(Email, newMail, subject);
+	//await mailer(Email, newMail, subject);
+console.log(req.body);
 	res.sendStatus(200);
 })
 
